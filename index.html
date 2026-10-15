@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-en="HN Consulting Engineering | Electromechanical (MEP) Studies">HN Consulting Engineering | Ηλεκτρομηχανολογικές Μελέτες</title>
+<meta data-en="HN Consulting Engineering - MEP studies, photovoltaics, energy studies (KENAK), energy certificates, fire safety, PPC certificates" name="description" content="HN Consulting Engineering - Ηλεκτρομηχανολογικές μελέτες, φωτοβολταϊκά, ενεργειακές μελέτες (KENAK), έκδοση ΠΕΑ, πυρασφάλεια, Πιστοποιητικά ΔΕΗ">
+<style>
+  :root{
+    --green:#3fb56c;
+    --green-d:#2f9657;
+    --blue:#2b9cf4;
+    --blue-d:#1b7fd0;
+    --yellow:#ffb300;
+    --slate:#3a5a7c;
+    --ink:#1f3a56;
+    --muted:#5d7189;
+    --bg:#f3f8fb;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e3edf4}
+  nav{max-width:1200px;margin:0 auto;padding:8px 24px;display:flex;align-items:center;justify-content:space-between}
+  .nav-logo{display:flex;align-items:center;gap:12px;color:var(--ink);font-weight:700;letter-spacing:.3px}
+  .nav-logo img{height:52px;width:auto}
+  nav ul{display:flex;gap:28px;list-style:none}
+  nav ul a{color:var(--slate);font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+  nav ul a:hover{color:var(--blue);border-color:var(--green)}
+
+  .lang{display:flex;gap:4px;margin-left:18px;background:#eaf1f7;border-radius:999px;padding:3px}
+  .lang button{border:none;background:transparent;font:700 13px "Segoe UI",Arial,sans-serif;color:var(--slate);padding:6px 12px;border-radius:999px;cursor:pointer}
+  .lang button.on{background:var(--blue);color:#fff}
+  /* HERO */
+  .hero{
+    background:
+      radial-gradient(circle at 15% 25%,rgba(63,181,108,.16),transparent 45%),
+      radial-gradient(circle at 85% 75%,rgba(43,156,244,.18),transparent 50%),
+      linear-gradient(180deg,#ffffff 0%,#eaf4fb 100%);
+    text-align:center;padding:60px 24px 90px;position:relative;overflow:hidden
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;opacity:.05;
+    background-image:linear-gradient(var(--slate) 1px,transparent 1px),linear-gradient(90deg,var(--slate) 1px,transparent 1px);
+    background-size:48px 48px;pointer-events:none
+  }
+  .hero-inner{position:relative;z-index:1;max-width:900px;margin:0 auto}
+  .big-logo{width:min(440px,82vw);height:auto;margin:0 auto 10px;display:block}
+  .hero p.lead{font-size:clamp(18px,2.4vw,24px);max-width:720px;margin:0 auto 36px;color:var(--ink);font-weight:500}
+  .hero p.sub{color:var(--muted);margin-bottom:36px}
+  .btn{display:inline-block;background:linear-gradient(135deg,var(--blue),var(--blue-d));color:#fff;font-weight:700;padding:14px 34px;border-radius:999px;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 24px rgba(43,156,244,.35)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(43,156,244,.45)}
+
+  /* SECTIONS */
+  section{padding:90px 24px}
+  .wrap{max-width:1200px;margin:0 auto}
+  .eyebrow{color:var(--green-d);font-weight:700;letter-spacing:.2em;font-size:13px;text-transform:uppercase;text-align:center}
+  h2{font-size:clamp(28px,4vw,42px);text-align:center;color:var(--ink);margin:8px 0 12px}
+  .section-sub{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 56px}
+
+  /* SERVICES */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:32px}
+  .card{background:var(--card);border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(31,58,86,.08);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(31,58,86,.16)}
+  .photo{height:380px;background:#dbe7f0 center/cover no-repeat;position:relative}
+  .photo.fit{background-color:#fff;background-size:contain}
+  .photo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--green),var(--blue),var(--yellow))}
+  .card-body{padding:26px 28px 32px}
+  .card-body h3{color:var(--ink);font-size:22px;line-height:1.3;margin-bottom:10px}
+  .card-body p{color:var(--muted)}
+
+  /* ABOUT */
+  #about{background:linear-gradient(135deg,#1f3a56 0%,#2a4d73 100%);color:#fff}
+  #about h2{color:#fff}
+  #about .eyebrow{color:var(--yellow)}
+  .about-grid{display:grid;grid-template-columns:1fr;gap:26px;max-width:1100px;margin:40px auto 0}
+  .about-item{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-left:4px solid var(--green);border-radius:18px;padding:36px 40px}
+  .about-item:nth-child(2){border-left-color:var(--blue)}
+  .about-item:nth-child(3){border-left-color:var(--yellow)}
+  .about-item .edu-main{font-size:clamp(18px,2.1vw,24px);font-weight:700;color:#fff;line-height:1.35;margin-bottom:12px}
+  .about-item .edu-sub{font-size:clamp(16px,1.9vw,19px);color:var(--yellow);line-height:1.5}
+  .about-item .cert{font-size:clamp(14px,1.7vw,19px);font-weight:600;color:#fff;white-space:nowrap;text-align:center;overflow-x:auto}
+  .about-item .exp-intro{font-size:19px;font-weight:600;color:#fff;margin:6px 0 14px}
+  .exp-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px 24px}
+  .exp-list li{color:#e0eaf5;font-size:17px;padding-left:26px;position:relative}
+  .exp-list li::before{content:"✔";position:absolute;left:0;color:var(--yellow);font-weight:700}
+  .about-item h4{color:#8fe0b0;margin-bottom:8px;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+  .about-item p{color:#e0eaf5}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:960px;margin:0 auto}
+  .contact-card{background:#fff;border-radius:18px;padding:32px 24px;text-align:center;box-shadow:0 10px 30px rgba(31,58,86,.08);border-top:4px solid var(--green);transition:transform .2s}
+  .contact-card:nth-child(2){border-top-color:var(--blue)}
+  .contact-card:nth-child(3){border-top-color:var(--yellow)}
+  .contact-card:hover{transform:translateY(-4px)}
+  .contact-card .ico{font-size:34px;margin-bottom:10px}
+  .contact-card strong{display:block;color:var(--ink);margin-bottom:4px}
+  .contact-card a:hover{color:var(--blue)}
+
+
+  /* FORM */
+  .cform{max-width:760px;margin:44px auto 0;background:#fff;border-radius:20px;padding:36px;box-shadow:0 10px 30px rgba(31,58,86,.08);display:grid;gap:16px;position:relative}
+  .cform h3{color:var(--ink);font-size:24px}
+  .cform .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cform label{display:grid;gap:6px;font-weight:600;font-size:14px;color:var(--slate)}
+  .cform input[type=text],.cform input[type=email],.cform input[type=tel],.cform textarea{font:inherit;padding:12px 14px;border:1.5px solid #cfdce8;border-radius:10px;background:#f9fcfe;color:var(--ink)}
+  .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(43,156,244,.2)}
+  .cform .check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14px;color:var(--muted)}
+  .cform .check input{margin-top:4px;width:18px;height:18px;flex:none}
+  .cform .check a{color:var(--blue);text-decoration:underline}
+  .cform .btn{border:none;cursor:pointer;font-size:16px;justify-self:start}
+  .cform .btn:disabled{opacity:.6;cursor:wait}
+  #cfMsg{font-weight:600}
+  #cfMsg.ok{color:var(--green-d)}#cfMsg.err{color:#c0392b}
+  footer a{color:#cfe0f3;text-decoration:underline}
+  footer .flinks{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+  footer .legal-id{margin-top:8px;font-size:13px;color:#7f94ad}
+  @media(max-width:700px){.cform{padding:24px 20px}.cform .row{grid-template-columns:1fr}}
+  footer{background:#16293f;color:#9fb3ca;text-align:center;padding:28px 24px;font-size:14px}
+
+  @media(max-width:700px){
+    nav ul{gap:12px}
+    .lang{margin-left:8px}
+    .lang button{padding:5px 9px}
+    nav ul a{font-size:13px}
+    .nav-logo span{display:none}
+    .grid{grid-template-columns:1fr}
+    .about-item{padding:26px 22px}
+    .about-item .cert{white-space:normal;text-align:left}
+    .photo{height:300px}
+    section{padding:64px 20px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#home" class="nav-logo">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjgwIC0xMDUgNDQyIDQ5NSIgd2lkdGg9IjE3NjgiIGhlaWdodD0iMTk4MCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJITiBjb25zdWx0aW5nIGVuZ2luZWVyaW5nIj4KPHRpdGxlPkhOIGNvbnN1bHRpbmcgZW5naW5lZXJpbmc8L3RpdGxlPgo8ZGVmcz48Y2xpcFBhdGggaWQ9Imxvd2VyIj48cmVjdCB4PSIxNTAiIHk9IjIzMiIgd2lkdGg9IjMwMiIgaGVpZ2h0PSIxMzAiLz48L2NsaXBQYXRoPjwvZGVmcz4KCjxnIGNsaXAtcGF0aD0idXJsKCNsb3dlcikiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwMSwyMzIpIHNjYWxlKDEuOSkiIGZpbGw9IiMyQTlERjQiPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDAuMCkiLz48cmVjdCB4PSItMy41IiB5PSItNDUiIHdpZHRoPSI3IiBoZWlnaHQ9IjE5IiB0cmFuc2Zvcm09InJvdGF0ZSgyMi41KSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDQ1LjApIi8+PHJlY3QgeD0iLTMuNSIgeT0iLTQ1IiB3aWR0aD0iNyIgaGVpZ2h0PSIxOSIgdHJhbnNmb3JtPSJyb3RhdGUoNjcuNSkiLz48cmVjdCB4PSItMy41IiB5PSItNDUiIHdpZHRoPSI3IiBoZWlnaHQ9IjE5IiB0cmFuc2Zvcm09InJvdGF0ZSg5MC4wKSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDExMi41KSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDEzNS4wKSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDE1Ny41KSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDE4MC4wKSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDIwMi41KSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDIyNS4wKSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDI0Ny41KSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDI3MC4wKSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDI5Mi41KSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDMxNS4wKSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDMzNy41KSIvPjwvZz48cGF0aCBkPSJNMjQ0LDIzMiBhNTcsNTcgMCAxLDAgMTE0LDAgYTU3LDU3IDAgMSwwIC0xMTQsMCBaIE0yNjEuMSwyMzIgYTM5LjksMzkuOSAwIDEsMCA3OS44LDAgYTM5LjksMzkuOSAwIDEsMCAtNzkuOCwwIFoiIGZpbGw9IiMyQTlERjQiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjxjaXJjbGUgY3g9IjMwMSIgY3k9IjIzMiIgcj0iMTkiIGZpbGw9IiMyQTlERjQiLz48L2c+CjxnIGZpbGw9IiMyQTlERjQiPjxyZWN0IHg9IjE1MCIgeT0iODAiIHdpZHRoPSIyMiIgaGVpZ2h0PSIxNDAiLz48cmVjdCB4PSIyNjIiIHk9IjgwIiB3aWR0aD0iMjIiIGhlaWdodD0iMTQwIi8+PHJlY3QgeD0iMTcyIiB5PSIxMzkiIHdpZHRoPSI5MCIgaGVpZ2h0PSIyMiIvPjxyZWN0IHg9IjMzMCIgeT0iODAiIHdpZHRoPSIyMiIgaGVpZ2h0PSIxNDAiLz48cmVjdCB4PSI0MzAiIHk9IjgwIiB3aWR0aD0iMjIiIGhlaWdodD0iMTQwIi8+PHBvbHlnb24gcG9pbnRzPSIzMzAsODAgMzUyLDgwIDQ1MiwyMjAgNDMwLDIyMCIvPjwvZz4KPHBvbHlsaW5lIHBvaW50cz0iMTEwLDYyIDMwMSwtNjAgNDkyLDYyIiBmaWxsPSJub25lIiBzdHJva2U9IiMzREI0NkQiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiLz4KPHBvbHlnb24gcG9pbnRzPSIyNjQsNiAyMzgsNDIgMjUyLDQyIDI0NCw3MiAyNzQsMzQgMjYwLDM0IiBmaWxsPSIjRkZCNDAwIiBzdHJva2U9IiNGRkI0MDAiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIi8+CjxyZWN0IHg9IjI5MiIgeT0iMTAiIHdpZHRoPSIyNCIgaGVpZ2h0PSIxMCIgcng9IjIiIGZpbGw9IiMyRTlFNEYiLz48cmVjdCB4PSIyOTIiIHk9IjIyLjUiIHdpZHRoPSIzNCIgaGVpZ2h0PSIxMCIgcng9IjIiIGZpbGw9IiM2QkJGNEEiLz48cmVjdCB4PSIyOTIiIHk9IjM1IiB3aWR0aD0iNDQiIGhlaWdodD0iMTAiIHJ4PSIyIiBmaWxsPSIjQjVENjNFIi8+PHJlY3QgeD0iMjkyIiB5PSI0Ny41IiB3aWR0aD0iNTQiIGhlaWdodD0iMTAiIHJ4PSIyIiBmaWxsPSIjRjJDMjMwIi8+PHJlY3QgeD0iMjkyIiB5PSI2MCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjEwIiByeD0iMiIgZmlsbD0iI0VFOEEyQiIvPgo8dGV4dCB4PSIzMDEiIHk9IjM1MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzNDNUE3OCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGxldHRlci1zcGFjaW5nPSI1Ij5DT05TVUxUSU5HIEVOR0lORUVSSU5HPC90ZXh0Pgo8L3N2Zz4=" alt="HN Consulting Engineering">
+      <span>HN Consulting Engineering</span>
+    </a>
+    <ul>
+      <li><a href="#home"><span data-en="Home">Αρχική</span></a></li>
+      <li><a href="#services"><span data-en="Services">Υπηρεσίες</span></a></li>
+      <li><a href="#about"><span data-en="About">Σχετικά</span></a></li>
+      <li><a href="#contact"><span data-en="Contact">Επικοινωνία</span></a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="el">EL</button><button type="button" data-lang="en">EN</button></div>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <img class="big-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjgwIC0xMDUgNDQyIDQ5NSIgd2lkdGg9IjE3NjgiIGhlaWdodD0iMTk4MCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJITiBjb25zdWx0aW5nIGVuZ2luZWVyaW5nIj4KPHRpdGxlPkhOIGNvbnN1bHRpbmcgZW5naW5lZXJpbmc8L3RpdGxlPgo8ZGVmcz48Y2xpcFBhdGggaWQ9Imxvd2VyIj48cmVjdCB4PSIxNTAiIHk9IjIzMiIgd2lkdGg9IjMwMiIgaGVpZ2h0PSIxMzAiLz48L2NsaXBQYXRoPjwvZGVmcz4KCjxnIGNsaXAtcGF0aD0idXJsKCNsb3dlcikiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwMSwyMzIpIHNjYWxlKDEuOSkiIGZpbGw9IiMyQTlERjQiPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDAuMCkiLz48cmVjdCB4PSItMy41IiB5PSItNDUiIHdpZHRoPSI3IiBoZWlnaHQ9IjE5IiB0cmFuc2Zvcm09InJvdGF0ZSgyMi41KSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDQ1LjApIi8+PHJlY3QgeD0iLTMuNSIgeT0iLTQ1IiB3aWR0aD0iNyIgaGVpZ2h0PSIxOSIgdHJhbnNmb3JtPSJyb3RhdGUoNjcuNSkiLz48cmVjdCB4PSItMy41IiB5PSItNDUiIHdpZHRoPSI3IiBoZWlnaHQ9IjE5IiB0cmFuc2Zvcm09InJvdGF0ZSg5MC4wKSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDExMi41KSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDEzNS4wKSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDE1Ny41KSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDE4MC4wKSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDIwMi41KSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDIyNS4wKSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDI0Ny41KSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDI3MC4wKSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDI5Mi41KSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDMxNS4wKSIvPjxyZWN0IHg9Ii0zLjUiIHk9Ii00NSIgd2lkdGg9IjciIGhlaWdodD0iMTkiIHRyYW5zZm9ybT0icm90YXRlKDMzNy41KSIvPjwvZz48cGF0aCBkPSJNMjQ0LDIzMiBhNTcsNTcgMCAxLDAgMTE0LDAgYTU3LDU3IDAgMSwwIC0xMTQsMCBaIE0yNjEuMSwyMzIgYTM5LjksMzkuOSAwIDEsMCA3OS44LDAgYTM5LjksMzkuOSAwIDEsMCAtNzkuOCwwIFoiIGZpbGw9IiMyQTlERjQiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjxjaXJjbGUgY3g9IjMwMSIgY3k9IjIzMiIgcj0iMTkiIGZpbGw9IiMyQTlERjQiLz48L2c+CjxnIGZpbGw9IiMyQTlERjQiPjxyZWN0IHg9IjE1MCIgeT0iODAiIHdpZHRoPSIyMiIgaGVpZ2h0PSIxNDAiLz48cmVjdCB4PSIyNjIiIHk9IjgwIiB3aWR0aD0iMjIiIGhlaWdodD0iMTQwIi8+PHJlY3QgeD0iMTcyIiB5PSIxMzkiIHdpZHRoPSI5MCIgaGVpZ2h0PSIyMiIvPjxyZWN0IHg9IjMzMCIgeT0iODAiIHdpZHRoPSIyMiIgaGVpZ2h0PSIxNDAiLz48cmVjdCB4PSI0MzAiIHk9IjgwIiB3aWR0aD0iMjIiIGhlaWdodD0iMTQwIi8+PHBvbHlnb24gcG9pbnRzPSIzMzAsODAgMzUyLDgwIDQ1MiwyMjAgNDMwLDIyMCIvPjwvZz4KPHBvbHlsaW5lIHBvaW50cz0iMTEwLDYyIDMwMSwtNjAgNDkyLDYyIiBmaWxsPSJub25lIiBzdHJva2U9IiMzREI0NkQiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiLz4KPHBvbHlnb24gcG9pbnRzPSIyNjQsNiAyMzgsNDIgMjUyLDQyIDI0NCw3MiAyNzQsMzQgMjYwLDM0IiBmaWxsPSIjRkZCNDAwIiBzdHJva2U9IiNGRkI0MDAiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIi8+CjxyZWN0IHg9IjI5MiIgeT0iMTAiIHdpZHRoPSIyNCIgaGVpZ2h0PSIxMCIgcng9IjIiIGZpbGw9IiMyRTlFNEYiLz48cmVjdCB4PSIyOTIiIHk9IjIyLjUiIHdpZHRoPSIzNCIgaGVpZ2h0PSIxMCIgcng9IjIiIGZpbGw9IiM2QkJGNEEiLz48cmVjdCB4PSIyOTIiIHk9IjM1IiB3aWR0aD0iNDQiIGhlaWdodD0iMTAiIHJ4PSIyIiBmaWxsPSIjQjVENjNFIi8+PHJlY3QgeD0iMjkyIiB5PSI0Ny41IiB3aWR0aD0iNTQiIGhlaWdodD0iMTAiIHJ4PSIyIiBmaWxsPSIjRjJDMjMwIi8+PHJlY3QgeD0iMjkyIiB5PSI2MCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjEwIiByeD0iMiIgZmlsbD0iI0VFOEEyQiIvPgo8dGV4dCB4PSIzMDEiIHk9IjM1MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNyIgZmlsbD0iIzNDNUE3OCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGxldHRlci1zcGFjaW5nPSI1Ij5DT05TVUxUSU5HIEVOR0lORUVSSU5HPC90ZXh0Pgo8L3N2Zz4=" alt="HN Consulting Engineering">
+    <h1 class="sr-only">HN Consulting Engineering</h1>
+    <p class="lead"><span data-en="Electromechanical (MEP) studies and consulting services with reliability and expertise">Ηλεκτρομηχανολογικές μελέτες και συμβουλευτικές υπηρεσίες με αξιοπιστία και τεχνογνωσία</span></p>
+    <a class="btn" href="#services"><span data-en="View our services">Δείτε τις υπηρεσίες</span></a>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow"><span data-en="What we offer">Τι προσφέρουμε</span></div>
+    <h2><span data-en="Our Services">Οι Υπηρεσίες μας</span></h2>
+    <p class="section-sub"><span data-en="Specialized engineering study services for every need">Εξειδικευμένες μελετητικές υπηρεσίες για κάθε ανάγκη</span></p>
+
+    <div class="grid">
+      <article class="card">
+        <div class="photo fit" style="background-image:url('images/melethes.jpg')" role="img" aria-label="Ηλεκτρομηχανολογικές Μελέτες και Σχεδιασμός"></div>
+        <div class="card-body">
+          <h3><span data-en="MEP Engineering and Studies">Ηλεκτρομηχανολογικές Μελέτες και Σχεδιασμός</span></h3>
+          <p><span data-en="Complete studies and technical design of electromechanical installations">Ολοκληρωμένες μελέτες και τεχνικός σχεδιασμός ηλεκτρομηχανολογικών εγκαταστάσεων</span></p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo" style="background-image:url('images/photovoltaika.jpg')" role="img" aria-label="Φωτοβολταϊκά"></div>
+        <div class="card-body">
+          <h3><span data-en="Photovoltaics">Φωτοβολταϊκά</span></h3>
+          <p><span data-en="Studies and design of photovoltaic energy generation systems">Μελέτες και σχεδιασμός συστημάτων φωτοβολταϊκών παραγωγής ενέργειας</span></p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo fit" style="background-image:url('images/kenak.png')" role="img" aria-label="Ενεργειακές Μελέτες (KENAK)"></div>
+        <div class="card-body">
+          <h3><span data-en="Energy Studies (KENAK)">Ενεργειακές Μελέτες (KENAK)</span></h3>
+          <p><span data-en="Preparation of energy studies in accordance with the Greek Building Energy Performance Regulation (KENAK)">Σύνταξη ενεργειακών μελετών σύμφωνα με τον Κανονισμό Ενεργειακής Απόδοσης Κτιρίων</span></p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo fit" style="background-image:url('images/pea.png')" role="img" aria-label="Έκδοση ΠΕΑ"></div>
+        <div class="card-body">
+          <h3><span data-en="Energy Certificates">Έκδοση ΠΕΑ</span></h3>
+          <p><span data-en="Issuance of Energy Performance Certificates for residential and commercial buildings">Έκδοση Πιστοποιητικού Ενεργειακής Απόδοσης για κτίρια κατοικίας και επαγγελματικής χρήσης</span></p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo" style="background-image:url('images/pyrasfaleia.jpg')" role="img" aria-label="Πυρασφάλεια"></div>
+        <div class="card-body">
+          <h3><span data-en="Fire Safety">Πυρασφάλεια</span></h3>
+          <p><span data-en="Fire safety studies and fire protection systems">Μελέτες πυρασφάλειας και συστημάτων προστασίας από πυρκαγιά</span></p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="photo fit" style="background-image:url('images/ydee.png')" role="img" aria-label="Υ.Δ.Ε."></div>
+        <div class="card-body">
+          <h3><span data-en="PPC Certificates">Υ.Δ.Ε. – Πιστοποιητικά ΔΕΗ</span></h3>
+          <p><span data-en="Issuance of PPC certificates and related electrification procedures">Έκδοση πιστοποιητικών ΔΕΗ και σχετικές διαδικασίες ηλεκτροδότησης</span></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow"><span data-en="Who we are">Ποιοι είμαστε</span></div>
+    <h2><span data-en="About Us">Σχετικά με εμάς</span></h2>
+    <div class="about-grid">
+      <div class="about-item">
+        <p class="edu-main"><span data-en="Electrical &amp; Computer Engineer, University of Patras">Ηλεκτρολόγος Μηχανικός &amp; Τεχνολογίας Υπολογιστών, Πανεπιστήμιο Πατρών</span></p>
+        <p class="edu-sub"><span data-en="MSc in Applied Environmental Protection Policies and Techniques, University of West Attica (UNIWA)">MSc Εφαρμοσμένες πολιτικές και τεχνικές προστασίας περιβάλλοντος, ΠΑΔΑ</span></p>
+      </div>
+      <div class="about-item">
+        <p class="cert"><span data-en="Member of the Technical Chamber of Greece (TEE) | Energy Auditor Class C | Energy Inspector | Building Control Inspector">Μέλος ΤΕΕ | Ενεργειακός Ελεγκτής Γ' τάξης | Ενεργειακός Επιθεωρητής | Ελεγκτής Δόμησης</span></p>
+      </div>
+      <div class="about-item">
+        <h4><span data-en="Experience">Εμπειρία</span></h4>
+        <p class="exp-intro"><span data-en="10 years of experience in MEP design and engineering of:">10ετής εμπειρία σε σχεδιασμό και μελέτη Η/Μ:</span></p>
+        <ul class="exp-list">
+          <li><span data-en="apartment buildings">πολυκατοικιών</span></li>
+          <li><span data-en="luxury island residences">πολυτελών νησιωτικών κατοικιών</span></li>
+          <li><span data-en="hotels">ξενοδοχείων</span></li>
+          <li><span data-en="industrial facilities">βιομηχανικών μονάδων</span></li>
+          <li><span data-en="photovoltaic systems">Φωτοβολταϊκών</span></li>
+          <li><span data-en="specialized applications">Εξειδικευμένων εφαρμογών</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow"><span data-en="Get in touch">Επικοινωνήστε μαζί μας</span></div>
+    <h2><span data-en="Contact">Επικοινωνία</span></h2>
+    <p class="section-sub"><span data-en="We are at your disposal for any question or quote.">Είμαστε στη διάθεσή σας για κάθε ερώτηση ή προσφορά.</span></p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="ico">📞</div>
+        <strong><span data-en="Phone">Τηλέφωνο</span></strong>
+        <a href="tel:+306936593251">(+30) 6936593251</a>
+      </div>
+      <div class="contact-card">
+        <div class="ico">✉️</div>
+        <strong>Email</strong>
+        <a href="mailto:hn.engcon@gmail.com">hn.engcon@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="ico">📍</div>
+        <strong><span data-en="Areas">Περιοχές</span></strong>
+        <span data-en="Thessaloniki, Kalamaria, Igoumenitsa">Θεσσαλονίκη, Καλαμαριά, Ηγουμενίτσα</span>
+      </div>
+    </div>
+    <form class="cform" id="contactForm" novalidate>
+      <h3><span data-en="Send us a message">Στείλτε μας μήνυμα</span></h3>
+      <div class="row">
+        <label><span data-en="Full name *">Ονοματεπώνυμο *</span><input type="text" name="name" required autocomplete="name"></label>
+        <label>Email *<input type="email" name="email" required autocomplete="email"></label>
+      </div>
+      <label><span data-en="Phone">Τηλέφωνο</span><input type="tel" name="phone" autocomplete="tel"></label>
+      <label><span data-en="Message *">Μήνυμα *</span><textarea name="message" rows="5" required></textarea></label>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <label class="check"><input type="checkbox" name="consent" required>
+        <span data-en="I have read and accept the <a href='privacy.html' target='_blank'>Privacy Policy</a> and consent to the processing of my data in order to respond to my request. *">Διάβασα και αποδέχομαι την <a href="privacy.html" target="_blank"><span data-en="Privacy Policy">Πολιτική Απορρήτου</span></a> και συναινώ στην επεξεργασία των στοιχείων μου για την απάντηση στο αίτημά μου. *</span></label>
+      <button type="submit" class="btn" id="cfBtn"><span id="cfBtnT" data-en="Send">Αποστολή</span></button>
+      <p id="cfMsg" role="status"></p>
+    </form>
+
+  </div>
+</section>
+
+<footer>
+  <div class="flinks">
+    <a href="privacy.html"><span data-en="Privacy Policy">Πολιτική Απορρήτου</span></a>
+    <a href="cookies.html"><span data-en="Cookie Policy">Πολιτική Cookies</span></a>
+    <a href="disclaimer.html"><span data-en="Terms of Use">Όροι Χρήσης</span></a>
+    <a href="#" id="cookieSettings"><span data-en="Cookie Settings">Ρυθμίσεις Cookies</span></a>
+  </div>
+  <div data-en="© 2026 HN Consulting Engineering. All rights reserved.">© 2026 HN Consulting Engineering. Με επιφύλαξη παντός δικαιώματος.</div>
+    <div class="legal-id" data-en="Charalampos Nakos · Electrical Engineer · TEE Reg. No.: 140149 · VAT No.: 138399086 · Tax Office: Igoumenitsa · Mazarakia, Thesprotia, 46100">Χαράλαμπος Νάκος · Ηλεκτρολόγος Μηχανικός · Α.Μ. ΤΕΕ: 140149 · ΑΦΜ: 138399086 · ΔΟΥ Ηγουμενίτσας · Μαζαρακιά Θεσπρωτίας, Τ.Κ. 46100</div>
+</footer>
+<script src="site.js"></script>
+
+</body>
+</html>
