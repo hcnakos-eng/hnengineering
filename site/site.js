@@ -7,14 +7,14 @@
 
   var T={
     el:{
-      banner:'Ο ιστότοπος αποθηκεύει μόνο την επιλογή σας για τα cookies και δεν χρησιμοποιεί cookies παρακολούθησης ή διαφήμισης. Αν προστεθούν στο μέλλον προαιρετικά εργαλεία (π.χ. στατιστικά), θα ενεργοποιηθούν μόνο με τη συγκατάθεσή σας. Δείτε την <a href="cookies.html">Πολιτική Cookies</a> και την <a href="privacy.html">Πολιτική Απορρήτου</a>.',
+      banner:'Ο ιστότοπος αποθηκεύει μόνο την επιλογή σας για τα cookies και τη γλώσσα και δεν χρησιμοποιεί cookies παρακολούθησης ή διαφήμισης. Αν προστεθούν στο μέλλον προαιρετικά εργαλεία (π.χ. στατιστικά), θα ενεργοποιηθούν μόνο με τη συγκατάθεσή σας. Δείτε την <a href="cookies.html">Πολιτική Cookies</a> και την <a href="privacy.html">Πολιτική Απορρήτου</a>.',
       acc:'Αποδοχή',rej:'Απόρριψη',aria:'Συγκατάθεση cookies',
       sending:'Αποστολή...',send:'Αποστολή',
       ok:'Ευχαριστούμε! Το μήνυμά σας εστάλη. Θα επικοινωνήσουμε σύντομα.',
       err:'Κάτι πήγε στραβά. Παρακαλούμε στείλτε email στο hn.engcon@gmail.com.'
     },
     en:{
-      banner:'This website only stores your cookie choice and does not use tracking or advertising cookies. If optional tools (e.g. statistics) are added in the future, they will only be enabled with your consent. See our <a href="cookies.html">Cookie Policy</a> and <a href="privacy.html">Privacy Policy</a>.',
+      banner:'This website only stores your cookie and language choices and does not use tracking or advertising cookies. If optional tools (e.g. statistics) are added in the future, they will only be enabled with your consent. See our <a href="cookies.html">Cookie Policy</a> and <a href="privacy.html">Privacy Policy</a>.',
       acc:'Accept',rej:'Reject',aria:'Cookie consent',
       sending:'Sending...',send:'Send',
       ok:'Thank you! Your message has been sent. We will get back to you shortly.',
@@ -30,8 +30,8 @@
   var lang=initialLang();
   function t(k){return T[lang][k]}
 
-  function applyLang(l){
-    lang=l; ss(LK,l);
+  function applyLang(l,persist){
+    lang=l; if(persist)ss(LK,l);
     document.documentElement.lang=l;
     var els=document.querySelectorAll('[data-en]');
     for(var i=0;i<els.length;i++){
@@ -67,7 +67,7 @@
   document.addEventListener('DOMContentLoaded',function(){
     applyLang(lang);
     var lb=document.querySelectorAll('.lang button');
-    for(var i=0;i<lb.length;i++)lb[i].addEventListener('click',function(){applyLang(this.getAttribute('data-lang'))});
+    for(var i=0;i<lb.length;i++)lb[i].addEventListener('click',function(){applyLang(this.getAttribute('data-lang'),true)});
     if(!gs(KEY))show();
     var s=document.getElementById('cookieSettings');
     if(s)s.addEventListener('click',function(e){e.preventDefault();show()});
